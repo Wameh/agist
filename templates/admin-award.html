@@ -1,0 +1,60 @@
+{% extends "admin-base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                CREATE AN AWARD
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <form id="award" method="post" enctype="multipart/form-data">
+        <label for="exampleFormControlFile1">Player Name</label>
+        <input type="text" name="player_name" value="Player name" class="form-control form-control-sm"/>
+        <br>
+        <br>
+        <label for="exampleFormControlFile1">Award name</label>
+        <input type="text" name="award_name" value="Award" class="form-control form-control-sm"/>
+        <br>
+        <br>
+        <label for="exampleFormControlFile1">Age</label>
+        <input type="text" name="age" value="Age" class="form-control form-control-sm"/>
+        <br>
+        <br>
+        <label for="exampleFormControlFile1">Position</label>
+        <input type="text" name="position" value="Position" class="form-control form-control-sm"/>
+        <br>
+        <br>
+<!--                         <label for="exampleFormControlFile1">Team</label>
+        <input type="text" name="team" value="Team" class="form-control form-control-sm" />
+        <br>
+        <br> -->
+        <label for="exampleFormControlFile1">Select team</label>
+        <select class="form-control form-control-sm" id="exampleFormControlSelect1" name="team">
+        {% for i in teams %}        
+        <option id="{{ i.id }}">{{i.name}}</option>
+        {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label for="exampleFormControlFile1">Select a photo</label>
+        <input name="picture" type="file" class="form-control-file"/>
+        <br>
+        <label for="exampleFormControlFile1">Select team category</label>
+        <select class="form-control form-control-sm" id="exampleFormControlSelect1" name="category">
+          <option>Under 13</option>
+          <option>Under 15</option>
+          <option>Under 17</option>
+          <option>Under 21</option>
+        </select>
+        <br>
+        <br>
+
+        <button class="btn pull-right hidden-sm-down btn-success">Submit</button>
+    </form>
+</div>
+<br>
+{% endblock content %}

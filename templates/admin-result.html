@@ -1,0 +1,65 @@
+{% extends "admin-base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                UPDATE THE RESULT
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <form id="result" method="post" enctype="multipart/form-data">
+        <label for="exampleFormControlFile1">Team A name</label>
+        <input type="text" name="team_a" value="Team name" class="form-control form-control-sm"/>
+        <br>
+        <br>
+        <label for="exampleFormControlFile1">Team B name</label>
+        <input type="text" name="team_b" value="Team name" class="form-control form-control-sm"/>
+        <br>
+        <br>
+        <label for="exampleFormControlFile1">Score A name</label>
+        <input type="text" name="score_a" value="score A name" class="form-control form-control-sm"/>
+        <br>
+        <br>
+        <label for="exampleFormControlFile1">Score B name</label>
+        <input type="text" name="score_b" value="score B name" class="form-control form-control-sm"/>
+        <br>
+        <br>
+        <label for="exampleFormControlFile1">Select team category</label>
+        <select class="form-control form-control-sm" id="exampleFormControlSelect1" name="category">
+          <option>Under 13</option>
+          <option>Under 15</option>
+          <option>Under 17</option>
+          <option>Under 21</option>
+        </select>
+        <br>
+        <br>
+        <label for="exampleFormControlFile1">Enter the date, format mm/dd/yyyy </label>
+        <input type="text" name="date" value="mm/dd/yyyy" class="form-control form-control-sm" />
+        <br>
+        <br>
+        <label for="exampleFormControlFile1">Enter the time, format hh:mm/PM-AM </label>
+        <input type="text" name="time" value="hh:mm/AM" class="form-control form-control-sm" />
+        <br>
+        <br>
+        <br>
+        <button class="btn pull-right hidden-sm-down btn-success">Submit</button>
+    </form>
+</div>
+<br>
+<hr>
+
+
+                
+    <!-- ============================================================== -->
+    <!-- End PAge Content -->
+    <!-- ============================================================== -->
+</div>
+        <!-- partial -->
+        <!-- <br>
+        <hr> -->
+
+{% endblock content %}

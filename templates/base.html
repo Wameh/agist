@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sportz &mdash; Colorlib Sports Team Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+
+    
+
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+@-webkit-keyframes bounce {
+        0% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+  
+  30%{
+    transform: scale(1,1,0.5) translate(0px, 10px); 
+  }
+
+  75%{
+    transform: scale(1,1.1) translate(0px, -25px); 
+  }
+  
+ 100% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+}
+.store-buble img {
+    width: 30px;
+    object-fit: contain;
+    position: absolute;
+    right: 14px;
+    max-width: 100%;
+    height: auto;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    vertical-align: middle;
+    border-style: none;
+}
+#a-link:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+.store-buble {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background: #e7c06e;
+    display: flex;
+    padding: 15px 15px;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 37px;
+    right: 70px;
+    z-index: 9999;
+    text-decoration: white;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+
+
+}@media (max-width: 767px)
+{
+.store-buble {
+    bottom: 20px;
+    right: 20px;
+}
+}
+.store-buble:hover {
+  text-color:white;
+    -webkit-animation: buttonWidth 0.3s;
+    animation: buttonWidth 0.3s;
+    width: 200px;
+}
+#a-link:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+#a-link:active, #a-link:focus {
+    color: #e4b759;
+ }
+ .store-buble #btn-link {
+    /*display: none;
+    width: 0;
+    opacity: 10;*/
+    color: white;
+    white-space: nowrap;
+    margin: 0;
+    margin-right: 13px;
+    justify-content: center;
+    flex-direction: column;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing: 0;
+    line-height: 24px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+#btn-link{
+  color: white !important;
+}
+
+</style>
+    
+  </head>
+  <body>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-logo">
+          <a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Image"></a>
+        </div>
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar absolute transparent" role="banner">
+    
+      <nav class="site-navigation position-relative text-right bg-black text-md-right" role="navigation">
+        <div class="container position-relative">
+          <div class="site-logo">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+          </div>
+
+          <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+          <ul class="site-menu js-clone-nav d-none d-md-block">
+            <li class="">
+              <a href="{{url_for('home')}}">Home</a>
+              
+            </li>
+            <li class="has-children">
+              <a href="{{url_for('about')}}">Information</a>
+              <ul class="dropdown arrow-top">
+                <li><a href="{{url_for('about')}}">About</a></li>
+                <li><a href="{{url_for('mission')}}">Mission and Vision</a></li>
+                <li><a href="{{url_for('awards')}}">Tournament Prizes & Awards</a></li>
+                <li><a href="{{url_for('rules')}}">Tournament Rules</a></li>
+                <li><a href="{{url_for('conditions')}}">Terms and Conditions</a></li>
+                <li><a href="{{url_for('accomodation')}}">Accommodation and cost</a></li>
+              </ul>
+            </li>
+            <li><a href="{{url_for('registration')}}">Registration</a></li>
+
+            <li><a href="{{url_for('teams')}}">Teams</a></li>
+            <li><a href="{{url_for('media')}}">Media gallery</a></li>
+            <li><a href="{{url_for('contact')}}">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+
+
+    <div class="slide-one-item home-slider owl-carousel">
+      <div class="site-blocks-cover overlay" style="background-image: url({{ url_for('static', filename='images/hero_bg_2.jpeg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-start">
+            <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
+              <h1 class="bg-text-line">AGIST Tournament 2020 by GALEH International</h1>
+              <p><a href="{{url_for('about')}}" class="btn btn-primary btn-sm rounded-0 py-3 px-5">Read More</a></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div class="site-blocks-cover overlay" style="background-image: url({{ url_for('static', filename='images/img_3.jpeg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-start">
+            <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
+              <h1 class="bg-text-line">AGIST Tournament 2020 by GALEH International</h1>
+              <p><a href="{{url_for('about')}}" class="btn btn-primary btn-sm rounded-0 py-3 px-5">Read More</a></p>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="site-blocks-cover overlay" style="background-image: url({{ url_for('static', filename='images/hero_bg_4.jpeg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-start">
+            <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
+              <h1 class="bg-text-line">AGIST Tournament 2020 by GALEH International</h1>
+              <p><a href="{{url_for('about')}}" class="btn btn-primary btn-sm rounded-0 py-3 px-5">Read More</a></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      
+    </div>
+    
+
+    <div class="site-section pt-0 feature-blocks-1" data-aos="fade" data-aos-delay="100">
+      <div class="container"> 
+        <div class="row">
+          <div class="col-md-6 col-lg-4" >
+            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url({{ url_for('static', filename='images/hero_bg_4.jpeg') }});">
+              <div class="text">
+                <h2 class="h5 text-white">AGIST Tournament 2020 by GALEH International</h2>
+                <p>Expose, nurture and reward raw soccer talent to major Southern African leagues.</p>
+                <p class="mb-0"><a href="{{url_for('about')}}" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url({{ url_for('static', filename='images/img_1.jpeg') }});">
+              <div class="text">
+                <h2 class="h5 text-white">AGIST Tournament 2020 by GALEH International</h2>
+                <p>Expose, nurture and reward raw soccer talent to major Southern African leagues.</p>
+                <p class="mb-0"><a href="{{url_for('about')}}" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url({{ url_for('static', filename='images/img_2.jpeg') }});">
+              <div class="text">
+                <h2 class="h5 text-white">AGIST Tournament 2020 by GALEH International</h2>
+                <p>Expose, nurture and reward raw soccer talent to major Southern African leagues.</p>
+                <p class="mb-0"><a href="{{url_for('about')}}" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
+              </div>
+            </div>
+          </div>
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+ 
+    {% block content %}{% endblock %}
+
+    
+    <a class="store-buble" href="https://galehinternational.com/store" id="a-link">
+    <p id="btn-link">Visit Online Store</p>
+    <img src="https://galehinternational.com/wp-content/uploads/2019/12/store-icon.png" alt="Icon">
+    </a>
+    <footer class="site-footer border-top">
+      <div class="container">
+        
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | V360 and Colorlib </i><a href='" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+
+  <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src=" {{ url_for('static', filename='js/jquery-ui.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.countdown.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+  </body>
+</html>

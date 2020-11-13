@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+	 <!-- partial:index.partial.html -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+            <table class="table table-hover">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Photo</th>
+                  <th scope="col">Player Name</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Category</th>
+                </tr>
+              </thead>
+              <tbody>
+              	{% for i in players %}
+                <tr>
+                  <td class="w-25">
+                      <img src="{{ url_for('static', filename= i.photo )}}" class="img-fluid img-round" alt="Sheep" id="img-round">
+                  </td>
+                  <td>{{ i.name }}</td>
+                  <td>{{ i.age }}</td>
+                  <td>{{ i.category }}</a></td>
+                </tr>
+          		{% endfor %}
+              </tbody>
+            </table>   
+        </div>
+      </div>
+    </div>
+    <hr>
+    <style type="text/css">
+      
+      .img-round{
+          border-radius: 200px !important;
+          height: 80px;
+          width: 80px;
+
+    </style>
+    <!-- partial -->
+{% endblock content %}

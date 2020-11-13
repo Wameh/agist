@@ -1,0 +1,34 @@
+{% extends "admin-base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                CREATE A TEAM
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <form id="team" method="post" enctype="multipart/form-data">
+        <label for="exampleFormControlFile1">Team name</label>
+        <input type="text" name="name" value="Team name" class="form-control form-control-sm"/>
+
+        <label for="exampleFormControlFile1">Select team category</label>
+        <select class="form-control form-control-sm" id="exampleFormControlSelect1" name="category">
+          <option>Under 13</option>
+          <option>Under 15</option>
+          <option>Under 17</option>
+          <option>Under 21</option>
+         
+        </select>
+        <label for="exampleFormControlFile1">Upload a logo</label>
+        <input name="picture" type="file" class="form-control-file"/>
+        <br>
+        <br>
+        <button class="btn pull-right hidden-sm-down btn-success">Submit</button>
+    </form>
+</div>
+<br>
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+    
+
+    
+    <div class="site-blocks-cover overlay" style="background-image: url({{ url_for('static', filename='images/bkg.png') }});" >
+      <div class="container">
+        <div class="row align-items-center justify-content-start">
+          <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
+            <h1 class="bg-text-line">About Us</h1>
+            <strong><p class="mt-4">Annual Galeh International Soccer Tournament (AGIST) is a youth competition initiative by Galeh International in conjunction with Brits Soccer Acadermy and Zone24 to develop a coherent soccer development consciousness in young upcoming soccer players while exposing them to opportunities of going professional to scouts from all major leagues in Southern Africa</p></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div class="site-section" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <img src="{{ url_for('static', filename='images/about_2.jpeg') }}" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-6 pr-md-5">
+            <h2 class="text-black"></h2>
+            <p class="lead"><strong>AGIST accommodates under 13, 15, 17 and 21 years youth categories. It is held in Brits located in North West Province of South Africa. We extend our reach to and welcome all soccer teams and academies from both domestic and international grounds.
+            Galeh International is an International Sourcing company which assists businesses and individuals in buying goods internationally and domestically with branches in China and South Africa. We recognize the significant positive impacts Soccer has on young people and its potential to foster a community based mindset of brotherhood thus the competition is for.</strong></p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+{% endblock content %}

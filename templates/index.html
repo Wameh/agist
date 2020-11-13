@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="site-blocks-vs site-section bg-light">
+      
+      <div class="container">
+        
+        <h2 class="h6 text-uppercase text-black font-weight-bold mb-3">Latest Result</h2>
+        
+        
+          <div class="bg-image overlay-success rounded mb-5" style = "background-image: url({{ url_for('static', filename='images/hero_bg_1.jpg')}});
+          " data-stellar-background-ratio="0.5">
+            
+            <div class="row align-items-center">
+              <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+
+                <div class="text-center text-lg-left">
+                  <div class="d-block d-lg-flex align-items-center">
+                    <div class="image mx-auto mb-3 mb-lg-0 mr-lg-3">
+                      <img src="{{url_for('static', filename='e1ffdd4f4a1645ff.jpeg')}}" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="text">
+                      <h3 class="h5 mb-0 text-black">{{ fixture.team_a}}</h3>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-12 col-lg-4 text-center mb-4 mb-lg-0">
+                <div class="d-inline-block">
+                  <p class="mb-2"><small class="text-uppercase text-black font-weight-bold">AGIST Under 17 &mdash; Group stage</small></p>
+                  <div class="bg-black py-2 px-4 mb-2 text-white d-inline-block rounded"><span class="h3">{{fixture.time}}</span></div>
+                  <p class="mb-0"><small class="text-uppercase text-black font-weight-bold"></small></p>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-lg-4 text-center text-lg-right">
+                <div class="">
+                  <div class="d-block d-lg-flex align-items-center">
+                    <div class="image mx-auto ml-lg-3 mb-3 mb-lg-0 order-2">
+                      <img src="{{url_for('static', filename='e1ffdd4f4a1645ff.jpeg')}}" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="text order-1">
+                      <h3 class="h5 mb-0 text-black">{{ fixture.team_b }}</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        
+
+        
+        <div class="row">
+          <div class="col-md-12">
+
+            <h2 class="h6 text-uppercase text-black font-weight-bold mb-3">Matches</h2>
+            <div class="site-block-tab">
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Match 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Match 2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Match 3</a>
+                </li>
+              </ul>
+              
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                  <div class="row align-items-center">
+                    <div class="col-md-12">
+
+
+                      <!-- END row -->
+                      {% for i in fixture %}
+                      <div class="row bg-white align-items-center ml-0 mr-0 py-4 match-entry">
+                        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+
+                          <div class="text-center text-lg-left">
+                            <div class="d-block d-lg-flex align-items-center">
+                              <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
+<!--                                 <img src="{{url_for('static', filename=i.team_a.logo )}}" alt="Image" class="img-fluid">
+ -->                              </div>
+                              <div class="text">
+                                <h3 class="h5 mb-0 text-black">{{ i.team_a }}</h3>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="col-md-4 col-lg-4 text-center mb-4 mb-lg-0">
+                          <div class="d-inline-block">
+                            <div class="bg-black py-2 px-4 mb-2 text-white d-inline-block rounded"><span class="h5">{{i.time}}</span></div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-lg-4 text-center text-lg-right">
+                          <div class="">
+                            <div class="d-block d-lg-flex align-items-center">
+                              <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
+                                <!-- <img src="{{ i.team_b.logo }}" alt="Image" class="img-fluid"> -->
+                              </div>
+                              <div class="text order-1 w-100">
+                                <h3 class="h5 mb-0 text-black">{{ i.team_b }}</h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+
+                      <!-- END row -->
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                  <div class="row align-items-center">
+                    <div class="col-md-12">
+
+
+                      <!-- <div class="row bg-white align-items-center ml-0 mr-0 py-4 match-entry">
+                        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+
+                          <div class="text-center text-lg-left">
+                            <div class="d-block d-lg-flex align-items-center">
+                              <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
+                                <img src="images/logo_10.jpeg" alt="Image" class="img-fluid">
+                              </div>
+                              <div class="text">
+                                <h3 class="h5 mb-0 text-black">Bapong United FC</h3>
+                              </div>
+                            </div>
+                          </div>
+ --><!-- 
+                        </div>
+                        <div class="col-md-4 col-lg-4 text-center mb-4 mb-lg-0">
+                          <div class="d-inline-block">
+                            <div class="bg-black py-2 px-4 mb-2 text-white d-inline-block rounded"><span class="h5">0:0</span></div>
+                          </div>
+                        </div>
+ --><!-- 
+                        <div class="col-md-4 col-lg-4 text-center text-lg-right">
+                          <div class="">
+                            <div class="d-block d-lg-flex align-items-center">
+                              <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
+                                <img src="images/logo_13.jpeg" alt="Image" class="img-fluid">
+                              </div>
+                              <div class="text order-1 w-100">
+                                <h3 class="h5 mb-0 text-black">Sky City FC</h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+ -->
+                     
+<!-- 
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <div class="row align-items-center">
+                    <div class="col-md-12">
+
+
+                      <div class="row bg-white align-items-center ml-0 mr-0 py-4 match-entry">
+                        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+
+                          <div class="text-center text-lg-left">
+                            <div class="d-block d-lg-flex align-items-center">
+                              <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
+                                <img src="images/logo_10.jpeg" alt="Image" class="img-fluid">
+                              </div>
+                              <div class="text">
+                                <h3 class="h5 mb-0 text-black">Bapong United FC</h3>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="col-md-4 col-lg-4 text-center mb-4 mb-lg-0">
+                          <div class="d-inline-block">
+                            <div class="bg-black py-2 px-4 mb-2 text-white d-inline-block rounded"><span class="h5">0:0</span></div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-lg-4 text-center text-lg-right">
+                          <div class="">
+                            <div class="d-block d-lg-flex align-items-center">
+                              <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
+                                <img src="images/logo_13.jpeg" alt="Image" class="img-fluid">
+                              </div>
+                              <div class="text order-1 w-100">
+                                <h3 class="h5 mb-0 text-black">Sky City FC</h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+ -->
+                      <!-- END row -->
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock content %}
