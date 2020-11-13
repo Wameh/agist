@@ -16,7 +16,11 @@ bcrypt = Bcrypt(app)
 CORS(app)
 
 
-app.config['MONGO_URI'] = 'mongodb://localhost:27017/agist-db'
+app.config['MONGO_URI'] = 'mongodb+srv://xstian:0823361106@agist-cluster.wgzhb.mongodb.net/agist-db?retryWrites=true&w=majority'
+
+# client = pymongo.MongoClient("")
+# db = client.test
+
 app.config['SECRET_KEY'] = b'606c367f499e04db'
 
 mongo = PyMongo(app)
